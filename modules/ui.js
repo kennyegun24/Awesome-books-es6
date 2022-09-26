@@ -6,7 +6,7 @@ export default class UI {
     const books = store.getBooks();
     books.forEach((books) => this.addBookToList(books));
   }
-  
+
   addBookToList = (book) => {
     const books = document.querySelector('.books');
     const newBook = document.createElement('div');
