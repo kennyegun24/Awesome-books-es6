@@ -5,10 +5,10 @@ import { DateTime } from './modules/luxon.js';
 const store = new Store();
 const ui = new UI();
 
-const dt = DateTime.fromObject();
+let dt = DateTime.fromObject();
+dt = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 const date = document.querySelector('.dates');
-date.innerHTML = `
-<h2> ${dt.toLocaleString(DateTime.DATETIME_MED)}`;
+date.innerHTML = dt;
 
 class Book {
   constructor(title, author, id = Math.floor(Math.random() * 1000000)) {
