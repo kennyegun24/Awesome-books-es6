@@ -5,7 +5,7 @@ import { DateTime } from './modules/luxon.js';
 const store = new Store();
 const ui = new UI();
 
-let dt = DateTime.fromObject();
+let dt = DateTime.now();
 dt = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 const date = document.querySelector('.dates');
 date.innerHTML = dt;
