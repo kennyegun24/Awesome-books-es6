@@ -19,7 +19,7 @@ class Book {
 }
 
 // EVENT TO DISPLAY BOOKS
-document.addEventListener('DOMContentLoaded', UI.displayBooks);
+document.addEventListener('DOMContentLoaded', ui.displayBooks);
 // EVENT TO ADD A BOOK
 document.querySelector('.bookForm').addEventListener('submit', (e) => {
   e.preventDefault();
