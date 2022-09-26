@@ -4,7 +4,7 @@ export default class UI {
   displayBooks = () => {
     const store = new Store();
     const books = store.getBooks();
-    books.forEach((books) => this.addBookToList(books));
+    books.forEach((book) => this.addBookToList(book));
   }
 
   addBookToList = (book) => {
@@ -14,8 +14,7 @@ export default class UI {
         <div>
         <div class="bookDiv">
         <h4 id="title" class="">${book.title} &nbsp; &nbsp; &nbsp; &nbsp; by &nbsp; &nbsp; &nbsp; &nbsp; ${book.author}</h4>
-        <h4 class="hidy">${book.id}</h4>
-        <button class="delete">Remove</button>
+        <button id="${book.id}" class="delete">Remove</button>
         </div>
         <hr class="hr">
         </div>
