@@ -7,8 +7,8 @@ const ui = new UI();
 
 let dt = DateTime.now();
 dt = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
-const dater = document.querySelector('.dater');
-dater.innerHTML = dt;
+const date = document.querySelector('.dates');
+date.innerHTML = dt;
 
 class Book {
   constructor(title, author, id = Math.floor(Math.random() * 1000000)) {
@@ -18,10 +18,12 @@ class Book {
   }
 }
 
+// EVENT TO DISPLAY BOOKS
 document.addEventListener('DOMContentLoaded', ui.displayBooks);
-
+// EVENT TO ADD A BOOK
 document.querySelector('.bookForm').addEventListener('submit', (e) => {
   e.preventDefault();
+  // get form values
   const titleInput = document.querySelector('.title').value;
   const authorInput = document.querySelector('.author').value;
   if (titleInput !== '' && authorInput !== '') {
@@ -34,13 +36,32 @@ document.querySelector('.bookForm').addEventListener('submit', (e) => {
     alert('Please enter book tile and author');
   }
 });
-
+// EVENT DELETE
 document.querySelector('.books').addEventListener('click', (e) => {
   if (e.target.className === 'delete') {
     store.removeBook(e.target.id);
     ui.deleteBook(e.target);
   }
 });
+
+const header = document.querySelector('header');
+header.innerHTML = `
+<div class="header">
+<h2 class="navHeader">Awesome Books</h2>
+<nav>
+    <ul class="navUl">
+        <li class="list list-main">List</li>
+        <li class="list addNew">Add New</li>
+        <li class="list contactUs">Contact</li>
+    </ul>
+</nav>
+</div>
+<nav>
+<div class="date">
+  <p class="dates"></p>
+</div>
+</nav>
+`;
 
 const list = document.querySelector('.list-main');
 const books = document.querySelector('.books');
@@ -86,3 +107,12 @@ contact.addEventListener('click', () => {
   awesomeBooks.style.display = 'none';
   books.style.display = 'none';
 });
+
+const footer = document.querySelector('footer');
+footer.innerHTML = `
+<div class="footerDiv">
+<h2 class="footerHeader">
+    Copyright
+</h2>
+</div>
+</footer>`;
