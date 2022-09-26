@@ -5,6 +5,11 @@ import { DateTime } from './modules/luxon.js';
 const store = new Store();
 const ui = new UI();
 
+const dt = DateTime.fromObject();
+const date = document.querySelector('.dates');
+date.innerHTML = `
+<h2> ${dt.toLocaleString(DateTime.DATETIME_MED)}`;
+
 class Book {
   constructor(title, author, id = Math.floor(Math.random() * 1000000)) {
     this.title = title;
@@ -102,15 +107,8 @@ contact.addEventListener('click', () => {
   awesomeBooks.style.display = 'none';
   books.style.display = 'none';
 });
-const dt = DateTime.fromObject();
-// dt.toLocaleString(DateTime.DATETIME_MED)
-
-const date = document.querySelector('.dates');
-date.innerHTML = `
-<h2> ${dt.toLocaleString(DateTime.DATETIME_MED)}`;
 
 const footer = document.querySelector('footer');
-
 footer.innerHTML = `
 <div class="footerDiv">
 <h2 class="footerHeader">
