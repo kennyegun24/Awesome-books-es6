@@ -44,24 +44,10 @@ document.querySelector('.books').addEventListener('click', (e) => {
   }
 });
 
-const header = document.querySelector('header');
-header.innerHTML = `
-<div class="header">
-<h2 class="navHeader">Awesome Books</h2>
-<nav>
-    <ul class="navUl">
-        <li class="list list-main">List</li>
-        <li class="list addNew">Add New</li>
-        <li class="list contactUs">Contact</li>
-    </ul>
-</nav>
-</div>
-<nav>
-<div class="date">
-  <p class="dates"></p>
-</div>
-</nav>
-`;
+// const header = document.querySelector('.headerDiv');
+// header.innerHTML = `
+
+// `;
 
 const list = document.querySelector('.list-main');
 const books = document.querySelector('.books');
