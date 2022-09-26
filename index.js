@@ -1,5 +1,5 @@
 import Store from './modules/store.js';
-import UI from './modules/ui.js'
+import UI from './modules/ui.js';
 import { DateTime } from './modules/luxon.js';
 
 const store = new Store();
@@ -58,33 +58,33 @@ header.innerHTML = `
 </nav>
 `;
 
-const list = document.querySelector('.list-main')
-const books = document.querySelector('.books')
-const awesomeBooks = document.querySelector('.awesomeBooks')
-const addNew = document.querySelector('.addNew')
-const bookForm = document.querySelector('.bookForm')
-const contact = document.querySelector('.contactUs')
-const contactUs = document.querySelector('.contact')
+const list = document.querySelector('.list-main');
+const books = document.querySelector('.books');
+const awesomeBooks = document.querySelector('.awesomeBooks');
+const addNew = document.querySelector('.addNew');
+const bookForm = document.querySelector('.bookForm');
+const contact = document.querySelector('.contactUs');
+const contactUs = document.querySelector('.contact');
 
 list.addEventListener('click', () => {
-    // list.classList.toggle('list1')
-    books.style.display = "block"
-    awesomeBooks.style.display = 'block'
-    bookForm.style.display= 'none'
-    contactUs.style.display = 'none'
-})
+  // list.classList.toggle('list1')
+  books.style.display = 'block';
+  awesomeBooks.style.display = 'block';
+  bookForm.style.display = 'none';
+  contactUs.style.display = 'none';
+});
 
 addNew.addEventListener('click', () => {
-    // addNew.classList.toggle('list1')
-    bookForm.style.display= 'block'
-    books.style.display = "none"
-    awesomeBooks.style.display = 'none'
-    contactUs.style.display= 'none'
-})
+  // addNew.classList.toggle('list1')
+  bookForm.style.display = 'block';
+  books.style.display = 'none';
+  awesomeBooks.style.display = 'none';
+  contactUs.style.display = 'none';
+});
 
 contact.addEventListener('click', () => {
-    contactUs.style.display= 'flex'
-    contactUs.innerHTML = `
+  contactUs.style.display = 'flex';
+  contactUs.innerHTML = `
     <div class="contactDiv">
             <h2 class="contactHeader">Contact Information</h2>
             <p class="contactParagraph">Do you have any questoin or you just wanna say "HI"? <br>
@@ -97,18 +97,17 @@ contact.addEventListener('click', () => {
                 <li>&nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; Our addresses </li>
             </ul>
         </div>
-    `
-    bookForm.style.display= 'none'
-    awesomeBooks.style.display = 'none'
-    books.style.display = "none"
-})
+    `;
+  bookForm.style.display = 'none';
+  awesomeBooks.style.display = 'none';
+  books.style.display = 'none';
+});
 const dt = DateTime.fromObject();
 // dt.toLocaleString(DateTime.DATETIME_MED)
 
 const date = document.querySelector('.dates');
 date.innerHTML = `
 <h2> ${dt.toLocaleString(DateTime.DATETIME_MED)}`;
-
 
 const footer = document.querySelector('footer');
 
@@ -118,4 +117,4 @@ footer.innerHTML = `
     Copyright
 </h2>
 </div>
-</footer>`
+</footer>`;
