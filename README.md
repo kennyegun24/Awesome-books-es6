@@ -1,6 +1,8 @@
 # AwesomeBooks
 
-A basic website that allows users to add/remove books from a list.
+A basic website that allows users to add/remove books of choice from a list created by the.
+This website allows users to store each inputs to their local storage and these inputs can be deleted from the local storage also b clicking on the remove button.
+Tis project was created to test my knowledge on different things such as class constructor methods, modules, localstorage.
 
 ## Built With
 
